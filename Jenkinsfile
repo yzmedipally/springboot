@@ -3,7 +3,7 @@ pipeline {
 	agent any
 	
 	 environment {
-            LOCAL_BUILD_PATH=env.WORKSPACE+'/spring-boot-samples/spring-boot-sample-atmosphere/'
+            LOCAL_BUILD_PATH=env.WORKSPACE+'/"spring-boot-samples/spring-boot-sample-atmosphere"/'
 		 echo LOCAL_BUILD_PATH
         }
 	
