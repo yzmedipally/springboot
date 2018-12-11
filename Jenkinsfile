@@ -1,6 +1,6 @@
 pipeline {
     
-	node any {
+	node any
 	
 		stages {
 
@@ -27,6 +27,5 @@ pipeline {
 					}
 			}
 		}
-	}
 
 }
