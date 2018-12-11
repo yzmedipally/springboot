@@ -6,7 +6,7 @@ pipeline {
 		 path="{env.WORKSPACE+'/spring-boot-samples/spring-boot-sample-atmosphere'}"
         }
 	
-		dir(path)	
+	dir(path){	
 			stages {
 				 	stage ("clean"){
 						  bat 'mvn clean'
@@ -27,4 +27,5 @@ pipeline {
 						  archiveArtifacts "target/*.jar"
 					}
 				}
+	}
 }
