@@ -3,10 +3,10 @@ pipeline {
 	agent any
 	
 	 environment {
-		 LOCAL_BUILD_PATH="{env.WORKSPACE+'/spring-boot-samples/spring-boot-sample-atmosphere'}"
+		 path="{env.WORKSPACE+'/spring-boot-samples/spring-boot-sample-atmosphere'}"
         }
 	
-		dir(LOCAL_BUILD_PATH)	
+		dir(path)	
 			stages {
 				 	stage ("clean"){
 						  bat 'mvn clean'
