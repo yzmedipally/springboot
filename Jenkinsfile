@@ -1,4 +1,3 @@
-def path
 
 pipeline {
     
@@ -9,9 +8,8 @@ pipeline {
 //        }
 	
 	stages {
-		path= "spring-boot-samples/spring-boot-sample-atmosphere"
-
-		dir(path){	
+		
+		dir('spring-boot-samples/spring-boot-sample-atmosphere'){	
 
 			stage ("clean"){
 				  bat 'mvn clean'
