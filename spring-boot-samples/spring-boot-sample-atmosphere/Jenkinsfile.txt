@@ -4,7 +4,7 @@ Pipeline {
 	
 		git 'https://github.com/yzmedipally/springboot.git'
 
-		def project_path = "spring-boot-samples/spring-boot-sample-atmosphere"
+		def project_path = "spring-boot-samples/spring-boot-sample-atmosphere/Jenkinsfile"
 		
 		dir(project_path) {
 				stage ("clean"){
