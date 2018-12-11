@@ -3,7 +3,7 @@ pipeline {
 	agent any
 	
 	 environment {
-		 path="{env.WORKSPACE+'/spring-boot-samples/spring-boot-sample-atmosphere'}"
+		 path= "spring-boot-samples/spring-boot-sample-atmosphere"
         }
 	
 	stages {
