@@ -2,12 +2,10 @@ pipeline {
     
 	agent any
 	
-		stages {
-
 		def project_path = "spring-boot-samples/spring-boot-sample-atmosphere"
-		
-			dir(project_path) {
-					stage ("clean"){
+		dir(project_path)	
+			stages {
+				 	stage ("clean"){
 						  bat 'mvn clean'
 					}
 					stage ("verify"){
@@ -25,7 +23,5 @@ pipeline {
 					stage ("Artifact"){
 						  archiveArtifacts "target/*.jar"
 					}
-			}
-		}
-
+				}
 }
