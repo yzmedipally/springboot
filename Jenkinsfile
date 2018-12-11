@@ -1,3 +1,4 @@
+def path
 pipeline {
     
 	agent any
