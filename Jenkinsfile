@@ -1,13 +1,16 @@
 def path
+
 pipeline {
     
 	agent any
 	
-	 environment {
-		 path= "spring-boot-samples/spring-boot-sample-atmosphere"
-        }
+//	 environment {
+//		 path= "spring-boot-samples/spring-boot-sample-atmosphere"
+//        }
 	
 	stages {
+		path= "spring-boot-samples/spring-boot-sample-atmosphere"
+
 		dir(path){	
 
 			stage ("clean"){
