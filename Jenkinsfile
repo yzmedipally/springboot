@@ -3,13 +3,9 @@ pipeline {
     
 	agent any
 	
-//	 environment {
-//		 path= "spring-boot-samples/spring-boot-sample-atmosphere"
-//        }
-	
 	stages {
 		
-		dir('spring-boot-samples/spring-boot-sample-atmosphere'){	
+		dir('/spring-boot-samples/spring-boot-sample-atmosphere'){	
 
 			stage ("clean"){
 				  bat 'mvn clean'
