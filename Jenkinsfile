@@ -4,7 +4,6 @@ pipeline {
 	
 	 environment {
 		 LOCAL_BUILD_PATH="{env.WORKSPACE+'/spring-boot-samples/spring-boot-sample-atmosphere'}"
-		 echo $LOCAL_BUILD_PATH
         }
 	
 		dir(LOCAL_BUILD_PATH)	
