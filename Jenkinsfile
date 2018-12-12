@@ -4,7 +4,7 @@ pipeline {
 	  
 	       stage ("one") {
 			    steps {
-				workspacesetup (path)
+				workspacesetup ('path')
 			       echo "This is stage 1 print"
 			    }
                   
