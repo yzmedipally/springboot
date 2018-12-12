@@ -1,11 +1,13 @@
 pipeline {
    agent any   
        stages {
-	   dir('spring-boot-samples/spring-boot-sample-atmosphere'){
+	   
            stage ("one") {
+		   dir('spring-boot-samples/spring-boot-sample-atmosphere')
                     steps {
                        echo "This is stage 1 print"
                     }
+	   }
            }
            stage ("Two") {
                      steps {
@@ -26,7 +28,6 @@ pipeline {
                        }
              }
 	   }   
-          }
        }
 
 //def workspacesetup()
