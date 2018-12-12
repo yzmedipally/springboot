@@ -28,9 +28,3 @@ pipeline {
              	}
 	}   
 }
-
-def workspacesetup(path)
-{
-  def project_path = "spring-boot-samples/spring-boot-sample-atmosphere"
-  dir (project_path)
-}
