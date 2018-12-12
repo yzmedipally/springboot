@@ -4,7 +4,7 @@ pipeline {
 	  
 	       stage ("one") {
 			    steps {
-				workspacesetup ()
+				workspacesetup (path)
 			       echo "This is stage 1 print"
 			    }
                   
@@ -30,7 +30,7 @@ pipeline {
 	   }   
        }
 
-def workspacesetup()
+def workspacesetup(path)
 {
   def project_path = "spring-boot-samples/spring-boot-sample-atmosphere"
   dir (project_path)
