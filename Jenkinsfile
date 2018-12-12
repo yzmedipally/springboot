@@ -5,9 +5,11 @@ def project_path = "spring-boot-samples/spring-boot-sample-atmosphere"
 pipeline {
    agent any   
        stages {
-	       dir (project_path){
-	       stage ("one") {
+	       
+	       //stage ("one") {
 		    steps {
+			dir (project_path){
+				stage ("clean"){
 			echo "This is stage 1 print"
 		    }
       		}
@@ -25,6 +27,6 @@ pipeline {
                        steps {
                                echo "This is stage 3 print"
                        }
-		}}
+		}
 	}   
 }
