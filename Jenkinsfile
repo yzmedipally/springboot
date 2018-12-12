@@ -1,6 +1,7 @@
 pipeline {
    agent any   
        stages {
+	   dir('spring-boot-samples/spring-boot-sample-atmosphere'){
            stage ("one") {
                     steps {
                        echo "This is stage 1 print"
@@ -24,7 +25,7 @@ pipeline {
                                echo "This is stage 3 print"
                        }
              }
-	      
+	   }   
           }
        }
 
