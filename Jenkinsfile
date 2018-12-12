@@ -17,8 +17,8 @@ pipeline {
            	stage ("test") {
 		    steps {
 			  dir (project_path){
-				if($Buildchoice == "compile"){
-				 bat 'mvn compile'
+				if($Buildchoice == "test"){
+				 bat 'mvn test'
 				}
 			  }
 		     }
@@ -26,8 +26,8 @@ pipeline {
            	stage ("deploy") {
 		    steps {
 			dir (project_path){
-				if($Buildchoice == "compile"){
-				 bat 'mvn compile'
+				if($Buildchoice == "deploy"){
+				 bat 'mvn deploy'
 				}
 			}
 		     }
