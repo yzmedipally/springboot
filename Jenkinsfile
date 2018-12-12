@@ -3,11 +3,11 @@ pipeline {
        stages {
 	  
 	       stage ("one") {
-		//	dir('spring-boot-samples/spring-boot-sample-atmosphere'){
 			    steps {
+				    	dir('spring-boot-samples/spring-boot-sample-atmosphere'){
 			       echo "This is stage 1 print"
 			    }
-                 //   	}
+                   	}
 	   	}
           
            stage ("Two") {
