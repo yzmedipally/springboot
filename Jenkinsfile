@@ -6,10 +6,9 @@ pipeline {
    agent any   
        stages {
 	       
-	       //stage ("one") {
+	       stage ("one") {
 		    steps {
 			dir (project_path){
-				stage ("clean"){
 			echo "This is stage 1 print"
 		    }
 			}}
