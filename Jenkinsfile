@@ -1,17 +1,16 @@
-#!/bin/groovy
-
+#!/bin/
 def project_path = "spring-boot-samples/spring-boot-sample-atmosphere"
 
 pipeline {
    agent any   
        stages {
-	       
 	       stage ("one") {
 		    steps {
 			dir (project_path){
-			echo "This is stage 1 print"
-		    }
-			}}
+				echo "This is stage 1 print"
+			}
+		     }
+	       }
            	stage ("Two") {
                      steps {
                          input("Do you want me to continue")
