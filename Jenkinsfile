@@ -9,7 +9,8 @@ pipeline {
 			    dir (project_path){
 				    script{
 					    if($buildchoice == "compile"){
-						bat 'mvn compile'
+						//bat 'mvn compile'
+						build 'atmosphere-pipeline'
 					    }
 				    }
 			    }
