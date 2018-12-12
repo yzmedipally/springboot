@@ -11,23 +11,28 @@ pipeline {
 					    if($Buildchoice == "compile"){
 						bat 'mvn compile'
 					    }
-				    }}
+				    }
+			    }
 		     }
 	       }
            	stage ("test") {
 		    steps {
 			  dir (project_path){
-				if($Buildchoice == "test"){
-				 bat 'mvn test'
-				}
+				  script{
+					if($Buildchoice == "test"){
+					 bat 'mvn test'
+					}
+				  }
 			  }
 		     }
             	}
            	stage ("deploy") {
 		    steps {
 			dir (project_path){
-				if($Buildchoice == "deploy"){
-				 bat 'mvn deploy'
+				script{
+					if($Buildchoice == "deploy"){
+					 bat 'mvn deploy'
+					}
 				}
 			}
 		     }
