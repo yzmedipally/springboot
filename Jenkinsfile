@@ -4,10 +4,10 @@ pipeline {
 	  
 	       stage ("one") {
 			    steps {
-				    	dir('spring-boot-samples/spring-boot-sample-atmosphere'){
+				workspacesetup ()
 			       echo "This is stage 1 print"
 			    }
-                   	}
+                  
 	   	}
           
            stage ("Two") {
@@ -30,9 +30,8 @@ pipeline {
 	   }   
        }
 
-//def workspacesetup()
-//{
-//  def workspace = "learngit";
- // dir (workspace)
-  
-// }
+def workspacesetup()
+{
+  def project_path = "spring-boot-samples/spring-boot-sample-atmosphere"
+  dir (project_path)
+}
