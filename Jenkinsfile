@@ -4,27 +4,32 @@ def project_path = "spring-boot-samples/spring-boot-sample-atmosphere"
 pipeline {
    agent any   
        stages {
-	       stage ("one") {
+	       stage ("compile") {
 		    steps {
 			dir (project_path){
-				echo "This is stage 1 print"
+				if($Buildchoice == "compile"){
+				 bat 'mvn compile'
+				}
 			}
 		     }
 	       }
-           	stage ("Two") {
-                     steps {
-                         input("Do you want me to continue")
-                     }
+           	stage ("test") {
+		    steps {
+			dir (project_path){
+				if($Buildchoice == "compile"){
+				 bat 'mvn compile'
+				}
+			}
+		     }
             	}
-           	stage ("Three") {
-                        when {
-                              not{ 
-                                    branch "master"
-                              }
-                         }
-                       steps {
-                               echo "This is stage 3 print"
-                       }
+           	stage ("deploy") {
+		    steps {
+			dir (project_path){
+				if($Buildchoice == "compile"){
+				 bat 'mvn compile'
+				}
+			}
+		     }
 		}
 	}   
 }
