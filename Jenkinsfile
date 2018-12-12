@@ -12,7 +12,7 @@ pipeline {
 				stage ("clean"){
 			echo "This is stage 1 print"
 		    }
-      		}
+			}}
            	stage ("Two") {
                      steps {
                          input("Do you want me to continue")
