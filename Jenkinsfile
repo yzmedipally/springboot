@@ -1,21 +1,21 @@
 pipeline {
    agent any   
        stages {
-	   
-           stage ("one") {
-		   dir('spring-boot-samples/spring-boot-sample-atmosphere')
-                    steps {
-                       echo "This is stage 1 print"
-                    }
-	   }
-           }
+	  
+	       stage ("one") {
+			dir('spring-boot-samples/spring-boot-sample-atmosphere'){
+			    steps {
+			       echo "This is stage 1 print"
+			    }
+                    	}
+	   	}
+          
            stage ("Two") {
                      steps {
                          input("Do you want me to continue")
                      }
             }
-           stage ("Three") 
-	   {
+           stage ("Three") {
                         when {
                               not{ 
                                     branch "master"
