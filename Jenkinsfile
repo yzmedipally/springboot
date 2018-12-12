@@ -8,7 +8,7 @@ pipeline {
 		    steps {
 			    dir (project_path){
 				    script{
-					    if($Buildchoice == "compile"){
+					    if($buildchoice == "compile"){
 						bat 'mvn compile'
 					    }
 				    }
@@ -19,7 +19,7 @@ pipeline {
 		    steps {
 			  dir (project_path){
 				  script{
-					if($Buildchoice == "test"){
+					if($buildchoice == "test"){
 					 bat 'mvn test'
 					}
 				  }
@@ -30,7 +30,7 @@ pipeline {
 		    steps {
 			dir (project_path){
 				script{
-					if($Buildchoice == "deploy"){
+					if($buildchoice == "deploy"){
 					 bat 'mvn deploy'
 					}
 				}
